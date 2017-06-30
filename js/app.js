@@ -103,7 +103,7 @@ var Locations = [
         name: 'Ain shams university',
         lat: 30.0645657,
         lng: 31.27886079999996,
-        address: '1 El Sarayat St.¡ ABBASSEYA¡Egypt',
+        address: '1 El Sarayat St. ABBASSEYA,Egypt',
         index: 1,
         fsid: "4c963c5303413704fd8982ef"
     },

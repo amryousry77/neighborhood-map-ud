@@ -83,7 +83,9 @@ function initMap() {
           }
     ];
 
-
+	function googleError(){		// locations
+    document.getElementById('map').innerHTML = "Map didnt Worked!";		
+}
     //info 
     largeInfowindow = new google.maps.InfoWindow();
 
@@ -291,3 +293,7 @@ function format_rating(marker){
         return "Rating: " + marker.rating + "/10";
     }
 }
+		
+function googleError(){		
+    document.getElementById('map').innerHTML = "Map didnt Worked!";		
+}		

@@ -117,6 +117,23 @@ var Locations = [
         address: 'El-Tahrir Square, Qasr Ad Dobarah, Qasr an Nile, Cairo Governorate, Egypt',
         index: 2,
         fsid: "4cb48a7e1463a143dfb7bba9"
+    },
+    {
+        name: 'Zamalek Sporting Club',
+        lat:  30.0593895,
+        lng: 31.204958799999986,
+        address: 'Gazirat Mit Oqbah, Al Agouzah, Giza Governorate, Egypt',
+        index: 3,
+        fsid: "4ccae6fb33d3721e01d22c8b"
+
+    },
+    {
+        name: 'Egyptian Museum',
+        lat:  30.0478468,
+        lng: 31.233649300000025,
+        address: 'Ismailia, Qasr an Nile, Cairo Governorate, Egypt',
+        index: 4,
+        fsid: "4b653727f964a5203ee92ae3"
     }
 ];
 

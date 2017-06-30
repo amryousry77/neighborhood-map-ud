@@ -1,9 +1,11 @@
+
+$(".button-collapse").sideNav();
 var mar = []; //markers
 var map;          //Map info
 var VM;           //Model
 var SM  = "0057e7",
 unSM = "d62d20";
-$(".button-collapse").sideNav();
+
 var largeInfowindow;
 function initMap() {
 
@@ -86,6 +88,7 @@ function initMap() {
     largeInfowindow = new google.maps.InfoWindow();
 
     VM = new AppViewModel();
+  	
     ko.applyBindings(VM, document.getElementById("locations"));
 }
 
@@ -138,7 +141,7 @@ var AppModel = function(map, data) {
 
     //Click Listener 
     google.maps.event.addListener(marker, 'click', function(){
-        clicked_item = VM.locationList()[data.index];
+        var clicked_item = VM.locationList()[data.index];
         locationClicked(marker,clicked_item);
         showInfoWindow(marker,clicked_item);
     });
@@ -223,6 +226,7 @@ function locationClicked(marker, clicked_item){
 }
 
 function toggleSM(marker){
+  var i;
     for (i=0; i < mar.length; i++){
         mar[i].setIcon(makeMarkerIcon(unSM));
     }
@@ -242,6 +246,7 @@ function addMarkerInfo(marker){
         url: "https://api.foursquare.com/v2/venues/" + marker.foursquareid + '?client_id=4PGUZ0MSOKMVW2CWWKKY3ENH2VSG5GUPAWSBXCZIT0FN5FZ1&client_secret=JWPZTBJRH2BRIPEI5K0TGCX3UQ4VCRDFRCKILBIUCFGUT1M5&v=20161016',
         dataType: "json",
         success: function( response ){
+          var result;
             result = response.response.venue;
             if(result.hasOwnProperty('rating')){
                 marker.rating = result.rating;
